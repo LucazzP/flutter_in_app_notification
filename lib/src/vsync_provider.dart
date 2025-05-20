@@ -1,10 +1,7 @@
 part of 'in_app_notification.dart';
 
 class _VsyncProvider extends StatefulWidget {
-  const _VsyncProvider({
-    Key? key,
-    required this.child,
-  }) : super(key: key);
+  const _VsyncProvider({Key? key, required this.child}) : super(key: key);
 
   final Widget child;
 
@@ -12,8 +9,7 @@ class _VsyncProvider extends StatefulWidget {
   State<_VsyncProvider> createState() => __VsyncProviderState();
 }
 
-class __VsyncProviderState extends State<_VsyncProvider>
-    with TickerProviderStateMixin {
+class __VsyncProviderState extends State<_VsyncProvider> with TickerProviderStateMixin {
   late final _showController = AnimationController(
     vsync: this,
     duration: notificationShowingDuration,
@@ -24,8 +20,7 @@ class __VsyncProviderState extends State<_VsyncProvider>
     duration: notificationShowingDuration,
   );
 
-  late final _horizontalAnimationController =
-      HorizontalInteractAnimationController(
+  late final _horizontalAnimationController = HorizontalInteractAnimationController(
     vsync: this,
     duration: notificationHorizontalAnimationDuration,
   );
